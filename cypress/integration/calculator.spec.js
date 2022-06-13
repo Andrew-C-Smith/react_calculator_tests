@@ -8,7 +8,7 @@ describe("Calculator", () => {
     cy.get('.display').should('contain', '2')
   })
 
-  it('should update screen with arithmetical options', () =>{
+  it('should update screen with minus fucntion', () =>{
   cy.get('#number2').click();
   cy.get('#operator_add').click();
   cy.get('#number2').click();
@@ -17,6 +17,36 @@ describe("Calculator", () => {
 
 
   })
+
+  it('should update screen with subtract function', () =>{
+    cy.get('#number6').click();
+    cy.get('#operator-subtract').click();
+    cy.get('#number2').click();
+    cy.get('#operator-equals').click();
+    cy.get('.display').should('contain', '4')
+  
+  
+    })
+
+  it('should update screen with multiply function', () =>{
+    cy.get('#number6').click();
+    cy.get('#operator-multiply').click();
+    cy.get('#number2').click();
+    cy.get('#operator-equals').click();
+    cy.get('.display').should('contain', '12')
+    
+    
+    })
+
+  it('should update screen with divide function', () =>{
+    cy.get('#number6').click();
+    cy.get('#operator-divide').click();
+    cy.get('#number2').click();
+    cy.get('#operator-equals').click();
+    cy.get('.display').should('contain', '3')
+      
+      
+    })    
 
   it('should chain multiple operators togther', () =>{
     cy.get('#number2').click();
