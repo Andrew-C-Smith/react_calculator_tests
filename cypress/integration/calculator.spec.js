@@ -8,7 +8,7 @@ describe("Calculator", () => {
     cy.get('.display').should('contain', '2')
   })
 
-  it('should update screen with minus fucntion', () =>{
+  it('should update screen with add fucntion', () =>{
   cy.get('#number2').click();
   cy.get('#operator_add').click();
   cy.get('#number2').click();
